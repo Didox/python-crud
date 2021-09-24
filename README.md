@@ -2,6 +2,25 @@
 
 > Comando para atualizar pip: python -m pip install --upgrade pip
 
+
+# instala Django
+pip install Django
+
+# configura django admin
+django-admin startproject project .
+
+# verifica comandos disponíveis
+python manage.py
+
+# cria app django
+python manage.py startapp app
+
+# start app
+python manage.py runserver
+
+# roda teste
+python manage.py test
+
 > Comandos do Jenkins desktop:
 Start the Jenkins service: brew services start jenkins-lts
 Restart the Jenkins service: brew services restart jenkins-lts
@@ -133,11 +152,23 @@ Update the Jenkins version: brew upgrade jenkins-lts
 > Finalmente Deus! Criando imagem da aplicação: Esse problema é porque você não criou uma tag para a imagem, essa tag deve ter seu
 usuario_docker_hub/nome_da_imagem, ou se preferir, quando realizar o build já crie a imagem que esse padrão de nome.
 
-    docker build -t django-kube .
+
+## Build Docker
+docker build -t didox/app-django -f Dockerfile .
+
+## Build Docker and run
+docker run -d -p 8000:8000 --name app-django didox/app-django
+
+## Build Docker logs
+docker logs app-django -f --tail 100
+
+## remover imagem
+docker rm app-django
+
     
 > Dá treta se não tagear a imagem, então tagueie:
 
-    docker tag django-kube mariannesalomao/django-kube:django-kube
+    docker tag django-kube didox/django-kube:django-kube
     
     
 > Depois dê docker run

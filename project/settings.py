@@ -32,7 +32,8 @@ ALLOWED_HOSTS = [
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'http://ec2-15-229-3-179.sa-east-1.compute.amazonaws.com'
+    'http://ec2-15-229-3-179.sa-east-1.compute.amazonaws.com',
+    'http://ec2-18-228-189-122.sa-east-1.compute.amazonaws.com'
 ]
 
 CORS_ORIGIN_WHITELIST = [

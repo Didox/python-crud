@@ -31,6 +31,10 @@ ALLOWED_HOSTS = [
     'ec2-15-229-3-179.sa-east-1.compute.amazonaws.com'
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'http://ec2-15-229-3-179.sa-east-1.compute.amazonaws.com'
+]
+
 
 # Application definition
 
